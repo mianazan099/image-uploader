@@ -1,0 +1,24 @@
+{
+  "name": "image-uploader",
+  "version": "1.0.0",
+  "description": "a website for uploading images",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mianazan099/image-uploader.git"
+  },
+  "author": "Mian Azan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mianazan099/image-uploader/issues"
+  },
+  "homepage": "https://github.com/mianazan099/image-uploader#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
