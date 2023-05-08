@@ -1,10 +1,7 @@
 import express from "express";
 import multer from "multer";
-import path from "path";
-import { fileURLToPath } from "url";
+import cors from "cors";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = 3000 || process.env.PORT;
 
@@ -21,13 +18,14 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 app.use("/image", express.static("uploads"));
+app.use(cors());
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
+  res.send("hi");
 });
 
 app.post("/upload", upload.single("file"), (req, res) => {
-  res.send({ url: `image/${req.file.filename}` });
+  res.send({ url: `/image/${req.file.filename}` });
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
