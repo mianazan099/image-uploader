@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import image from "./assets/image.svg";
-import iamge from "../../uploads/file-1684300450595-877500422-shadi-(16).png";
 
 function App() {
   const [state, setState] = useState("");
@@ -65,7 +64,7 @@ function App() {
           />
         </svg>
         <p>Updated Successfully</p>
-        <img src={iamge} alt="" />
+        <img src={imgURL} alt="" />
         <div className="copy" data-imgURL={imgURL}>
           {/* <input value={imgURL} type="text" name="" id="" /> */}
 
