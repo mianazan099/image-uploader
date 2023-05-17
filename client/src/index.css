@@ -17,3 +17,130 @@ body {
   place-content: center;
   min-height: 100vh;
 }
+
+article {
+  padding: 36px 32px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 16px;
+}
+
+p {
+  margin-bottom: 28px;
+}
+
+span {
+  display: block;
+  color: #bdbdbd;
+}
+
+.drop-image-uploader {
+  display: block;
+  width: clamp(16.25rem, calc(8.13rem + 34.67vw), 21.13rem);
+  aspect-ratio: 1.54 / 1;
+  margin-bottom: 18px;
+  background: #f6f8fb;
+  border: 1px dashed #97bef4;
+  border-radius: 12px;
+  margin-inline: auto;
+}
+
+.drop-image-uploader>img {
+  margin-top: 36px;
+  margin-bottom: 28px;
+}
+
+.drop-image-uploader>span {
+  padding-bottom: 16px;
+}
+
+article>span {
+  margin-bottom: 20px;
+}
+
+.btn-image-uploader input[type='file'] {
+  display: none;
+}
+
+.btn-image-uploader:before {
+  content: "Choose a file";
+  display: block;
+  width: max-content;
+  background: #2f80ed;
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-inline: auto;
+}
+
+.uploading {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: -0.035em;
+  text-align: start;
+  color: #4F4F4F;
+}
+
+.uploading p {
+  margin-bottom: 8px;
+}
+
+.uploaded p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: -0.035em;
+  color: #4F4F4F;
+}
+
+.uploaded img {
+  border-radius: 12px;
+  width: clamp(16.25rem, calc(8.13rem + 34.67vw), 21.13rem);
+  aspect-ratio: 1.54 / 1;
+  margin-bottom: 1.5rem;
+}
+
+.uploaded div {
+  background: #F6F8FB;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding-left: 1rem;
+  display: flex;
+  position: relative;
+}
+
+.uploaded div:before {
+  content: attr(data-imgURL);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 230px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 8px;
+  line-height: 12px;
+  letter-spacing: -0.035em;
+  color: #4F4F4F;
+}
+
+.uploaded button {
+  z-index: 1;
+  margin-left: auto;
+  background: #2F80ED;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: -0.035em;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}

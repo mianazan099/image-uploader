@@ -1,29 +1,31 @@
 {
   "name": "image-uploader",
   "version": "1.0.0",
-  "description": "a website for uploading images",
+  "description": "a site for uploading images",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "server": "nodemon server/index.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mianazan099/image-uploader.git"
   },
+  "keywords": [],
   "author": "Mian Azan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mianazan099/image-uploader/issues"
   },
   "homepage": "https://github.com/mianazan099/image-uploader#readme",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "multer": "^1.4.5-lts.1"
-  },
   "devDependencies": {
     "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1"
   }
 }
